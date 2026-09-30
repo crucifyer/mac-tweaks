@@ -1,0 +1,63 @@
+{
+	"description": "right option 한자/이모티콘",
+	"manipulators": [
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [
+						"^com\\.google\\.Chrome\\.app\\.cmkncekebbebpfilplodngbpllndjkfo$",
+						"^com\\.utmapp\\.UTM$",
+						"^com\\.microsoft\\.rdc\\.macos$"
+					],
+					"description": "원격/가상 데스크탑 제외",
+					"type": "frontmost_application_unless"
+				},
+				{
+					"input_sources": [{ "input_source_id": "^com\\.apple\\.inputmethod\\.Korean\\.2SetKorean$" }],
+					"type": "input_source_unless"
+				}
+			],
+			"description": "이모티콘",
+			"from": {
+				"key_code": "right_option",
+				"modifiers": { "optional": ["caps_lock"] }
+			},
+			"to": [
+				{
+					"key_code": "spacebar",
+					"modifiers": ["left_control", "left_command"]
+				}
+			],
+			"type": "basic"
+		},
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [
+						"^com\\.google\\.Chrome\\.app\\.cmkncekebbebpfilplodngbpllndjkfo$",
+						"^com\\.utmapp\\.UTM$",
+						"^com\\.microsoft\\.rdc\\.macos$"
+					],
+					"description": "원격/가상 데스크탑 제외",
+					"type": "frontmost_application_unless"
+				},
+				{
+					"input_sources": [{ "input_source_id": "^com\\.apple\\.inputmethod\\.Korean\\.2SetKorean$" }],
+					"type": "input_source_if"
+				}
+			],
+			"description": "한자",
+			"from": {
+				"key_code": "right_option",
+				"modifiers": { "optional": ["caps_lock"] }
+			},
+			"to": [
+				{
+					"key_code": "return_or_enter",
+					"modifiers": ["left_option"]
+				}
+			],
+			"type": "basic"
+		}
+	]
+}
