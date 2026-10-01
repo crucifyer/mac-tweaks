@@ -31,8 +31,9 @@ cd ~/Library/KeyBindings
 curl -sSLO https://raw.githubusercontent.com/crucifyer/gksdud-karabiner/refs/heads/main/DefaultKeyBinding.dict
 ```
 - 새로 실행한 앱 부터 적용됩니다. 재부팅 하는 것이 편합니다.
-- home, end 를 누르면 커서가 맨 앞, 뒤 로 이동합니다.
+- home, end 를 누르면 커서가 줄의 맨 앞, 뒤 로 이동합니다.
 - shift+ 로 선택도 잘 됩니다.
+- slack 앱 처럼 줄 구별 없이 전체의 맨 앞, 뒤 로 이동하는 앱은 karabiner 에 등록하세요. [home.end.json](karabiner/home.end.json)
 
 ## HammerSpoon
 hammerspoon 을 설치하세요.

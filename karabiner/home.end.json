@@ -1,0 +1,49 @@
+{
+	"description": "Home/End를 줄 맨 앞/뒤 이동으로 변경",
+	"manipulators": [
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [
+						"^com\\.tinyspeck\\.slackmacgap$"
+					],
+					"type": "frontmost_application_if"
+				}
+			],
+			"description": "Ctrl+A",
+			"from": {
+				"key_code": "home",
+				"modifiers": { "optional": ["shift"] }
+			},
+			"to": [
+				{
+					"key_code": "a",
+					"modifiers": ["left_control"]
+				}
+			],
+			"type": "basic"
+		},
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [
+						"^com\\.tinyspeck\\.slackmacgap$"
+					],
+					"type": "frontmost_application_if"
+				}
+			],
+			"description": "Ctrl+E",
+			"from": {
+				"key_code": "end",
+				"modifiers": { "optional": ["shift"] }
+			},
+			"to": [
+				{
+					"key_code": "e",
+					"modifiers": ["left_control"]
+				}
+			],
+			"type": "basic"
+		}
+	]
+}
