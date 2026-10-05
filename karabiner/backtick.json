@@ -1,0 +1,31 @@
+{
+	"description": "한글(₩) 입력시 백틱(`) 변경",
+	"manipulators": [
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [
+						"^com\\.google\\.Chrome\\.app\\.cmkncekebbebpfilplodngbpllndjkfo$",
+						"^com\\.utmapp\\.UTM$",
+						"^com\\.microsoft\\.rdc\\.macos$"
+					],
+					"description": "원격/가상 데스크탑 제외",
+					"type": "frontmost_application_unless"
+				},
+				{
+					"input_sources": [{ "input_source_id": "^com\\.apple\\.inputmethod\\.Korean\\.2SetKorean$" }],
+					"type": "input_source_if"
+				}
+			],
+			"description": "백틱(`)",
+			"from": { "key_code": "grave_accent_and_tilde" },
+			"to": [
+				{
+					"key_code": "grave_accent_and_tilde",
+					"modifiers": ["left_option"]
+				}
+			],
+			"type": "basic"
+		}
+	]
+}
