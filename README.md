@@ -32,7 +32,7 @@ right_option 을 한자/이모티콘 키로 변경 [hanjakey.json](karabiner/han
 ```bash
 mkdir ~/Library/KeyBindings
 cd ~/Library/KeyBindings
-curl -sSLO https://raw.githubusercontent.com/crucifyer/gksdud-karabiner/refs/heads/main/DefaultKeyBinding.dict
+curl -sSLO https://raw.githubusercontent.com/crucifyer/mac-tweaks/refs/heads/main/DefaultKeyBinding.dict
 ```
 - 새로 실행한 앱 부터 적용됩니다. 재부팅 하는 것이 편합니다.
 - home, end 를 누르면 커서가 줄의 맨 앞, 뒤 로 이동합니다.
@@ -45,10 +45,10 @@ hammerspoon 을 설치하세요.
 brew install --cask hammerspoon
 hs
 cd ~/.hammerspoon
-curl -sSLO https://raw.githubusercontent.com/crucifyer/gksdud-karabiner/refs/heads/main/hammerspoon/init.lua
-curl -sSLO https://raw.githubusercontent.com/crucifyer/gksdud-karabiner/refs/heads/main/hammerspoon/windowsize.lua
-curl -sSLO https://raw.githubusercontent.com/crucifyer/gksdud-karabiner/refs/heads/main/hammerspoon/gksdud-disable.lua
-curl -sSLO https://raw.githubusercontent.com/crucifyer/gksdud-karabiner/refs/heads/main/hammerspoon/gksdud-toenglish.lua
+curl -sSLO https://raw.githubusercontent.com/crucifyer/mac-tweaks/refs/heads/main/hammerspoon/init.lua
+curl -sSLO https://raw.githubusercontent.com/crucifyer/mac-tweaks/refs/heads/main/hammerspoon/windowsize.lua
+curl -sSLO https://raw.githubusercontent.com/crucifyer/mac-tweaks/refs/heads/main/hammerspoon/gksdud-disable.lua
+curl -sSLO https://raw.githubusercontent.com/crucifyer/mac-tweaks/refs/heads/main/hammerspoon/gksdud-toenglish.lua
 ```
 [init.lua](hammerspoon/init.lua) 에서 원하는 기능만 dofile 로 불러오세요.
 
