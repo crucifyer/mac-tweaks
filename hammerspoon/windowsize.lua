@@ -74,3 +74,23 @@ hs.hotkey.bind({"ctrl", "alt", "cmd"}, "down", function()
   win:moveOneScreenSouth()
   win:maximize()
 end)
+
+hs.hotkey.bind({"ctrl", "shift", "cmd"}, "right", function()
+  local win = hs.window.focusedWindow()
+  win:moveOneScreenEast()
+end)
+
+hs.hotkey.bind({"ctrl", "shift", "cmd"}, "left", function()
+  local win = hs.window.focusedWindow()
+  win:moveOneScreenWest()
+end)
+
+hs.hotkey.bind({"ctrl", "shift", "cmd"}, "up", function()
+  local win = hs.window.focusedWindow()
+  win:moveOneScreenNorth()
+end)
+
+hs.hotkey.bind({"ctrl", "shift", "cmd"}, "down", function()
+  local win = hs.window.focusedWindow()
+  win:moveOneScreenSouth()
+end)

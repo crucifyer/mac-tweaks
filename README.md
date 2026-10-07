@@ -52,6 +52,7 @@ curl -sSLO https://raw.githubusercontent.com/crucifyer/gksdud-karabiner/refs/hea
 - control + option + 좌/우 : win + 좌/우 처럼 화면의 절반 크기로 변경
 - control + option + 상/하 : 높이만 화면 절반 크기로 변경
 - control + option + f : 화면 채우기
+- control + shift + command + 방향키 : 해당 방향의 화면으로 이동하기
 - control + option + command + 방향키 : 해당 방향의 화면으로 이동하고 채우기
 
 ## Scroll Reverser
