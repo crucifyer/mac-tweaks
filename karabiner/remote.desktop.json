@@ -157,27 +157,6 @@
 			"conditions": [
 				{
 					"name": "remote_virtual_donot_swap_flag",
-					"type": "variable_if",
-					"value": "1"
-				},
-				{
-					"bundle_identifiers": [
-						"^com\\.google\\.Chrome\\.app\\.cmkncekebbebpfilplodngbpllndjkfo$",
-						"^com\\.utmapp\\.UTM$",
-						"^com\\.microsoft\\.rdc\\.macos$"
-					],
-					"type": "frontmost_application_if"
-				}
-			],
-			"description": "원격/가상 데스크탑 에서 비활성시 오른쪽 cmd > f18",
-			"from": { "key_code": "right_command" },
-			"to": [{ "key_code": "f18" }],
-			"type": "basic"
-		},
-		{
-			"conditions": [
-				{
-					"name": "remote_virtual_donot_swap_flag",
 					"type": "variable_unless",
 					"value": "1"
 				},

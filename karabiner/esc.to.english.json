@@ -1,0 +1,26 @@
+{
+	"description": "특정 앱에서만 esc 로 영문 전환",
+	"manipulators": [
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [
+						"^org\\.vim\\.MacVim$",
+						"^com\\.googlecode\\.iterm2$"
+					],
+					"type": "frontmost_application_if"
+				},
+				{
+					"input_sources": [{ "input_source_id": "^com\\.apple\\.keylayout\\.ABC$" }],
+					"type": "input_source_unless"
+				}
+			],
+			"from": { "key_code": "escape" },
+			"to": [
+				{ "key_code": "escape" },
+				{ "shell_command": "/Applications/gksdud.app/Contents/Helpers/gksdud source com.apple.keylayout.ABC" }
+			],
+			"type": "basic"
+		}
+	]
+}

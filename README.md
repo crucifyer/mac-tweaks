@@ -24,7 +24,9 @@ right_option 을 한자/이모티콘 키로 변경 [hanjakey.json](karabiner/han
 - right_command, right_option 을 alt, ctrl 로 바꾸어 한영, 한자 키로 인식시킵니다. 원격지의 키보드 종류가 korean 이면 잘 동작합니다.
 - 윈도우가 아닌경우 right_command + right_option 으로 변환 상태를 해제할 수 있습니다.
 - UTM 리눅스 ibus 라면 우상단 언어상태 클릭 > 키보드 설정 에서 한국어(Hangul) 만 남기고, 설정 에서 Alt_R, Ctrl_R 로 각각 할당하면 됩니다.
-- UTM Mac 에서는 변환 상태를 해제하고 사용해야 하는데, 키보드 이벤트 전달이 안되므로 right_command 를 f18 에 할당하고, 이전 입력 소스 선택 에 f18 을 할당하고 사용합니다.
+- UTM Mac 에서는 변환 상태를 해제하고, hammerspoon 으로 gksdud 을 pause 하면 F19 가 그대로 전달되므로 이전 입력 소스 선택 을 F19 로 설정하면 됩니다. guest 에서 gksdud 을 설치할 수는 없습니다.
+
+특정 앱에서만 esc 로 영문 전환 [esc.to.english.json](karabiner/esc.to.english.json)
 
 ## 키보드의 Home, End 를 윈도우 처럼
 ```bash
@@ -45,8 +47,10 @@ hs
 cd ~/.hammerspoon
 curl -sSLO https://raw.githubusercontent.com/crucifyer/gksdud-karabiner/refs/heads/main/hammerspoon/init.lua
 curl -sSLO https://raw.githubusercontent.com/crucifyer/gksdud-karabiner/refs/heads/main/hammerspoon/windowsize.lua
+curl -sSLO https://raw.githubusercontent.com/crucifyer/gksdud-karabiner/refs/heads/main/hammerspoon/gksdud-disable.lua
+curl -sSLO https://raw.githubusercontent.com/crucifyer/gksdud-karabiner/refs/heads/main/hammerspoon/gksdud-toenglish.lua
 ```
-기능별로 lua 파일을 분리하고 [init.lua](hammerspoon/init.lua) 에서 dofile 로 불러오세요.
+[init.lua](hammerspoon/init.lua) 에서 원하는 기능만 dofile 로 불러오세요.
 
 창 크기 변경 [windowsize.lua](hammerspoon/windowsize.lua)
 - control + option + 좌/우 : win + 좌/우 처럼 화면의 절반 크기로 변경
@@ -54,6 +58,10 @@ curl -sSLO https://raw.githubusercontent.com/crucifyer/gksdud-karabiner/refs/hea
 - control + option + f : 화면 채우기
 - control + shift + command + 방향키 : 해당 방향의 화면으로 이동하기
 - control + option + command + 방향키 : 해당 방향의 화면으로 이동하고 채우기
+
+한영키 충돌하는 앱에서 비활성 [gisdud-disable.lua](hammerspoon/gksdud-disable.lua)
+
+특정 앱이 활성화 될 때 영문으로 변경 [gisdud-toenglish.lua](hammerspoon/gksdud-toenglish.lua)
 
 ## Scroll Reverser
 ```bash
