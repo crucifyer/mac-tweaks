@@ -1,6 +1,6 @@
 englishInputSource = "com.apple.keylayout.ABC"
 
-ideBundleIDs = {
+activeToEnglishIDs = {
   -- MacVim
   ["org.vim.MacVim"] = true,
 
@@ -37,10 +37,33 @@ ideBundleIDs = {
   ["com.google.android.studio"] = true,
 }
 
+escToEnglishIDs = {
+  -- MacVim
+  ["org.vim.MacVim"] = true,
+
+  -- iTerm2
+  ["com.googlecode.iterm2"] = true,
+}
+
+function initEscStatus()
+  local output, success = hs.execute("/Applications/gksdud.app/Contents/Helpers/gksdud get escape")
+  if not success then
+    return false
+  end
+  return output:gsub("^%s*(.-)%s*$", "%1") == "on"
+end
+
+beforeEscFlag = initEscStatus()
 
 function switchToEnglish()
   print("Switching to English.")
   hs.execute("/Applications/gksdud.app/Contents/Helpers/gksdud source " .. englishInputSource)
+end
+
+function setEscToEnglish(flag)
+  local switch = flag and "on" or "off"
+  print("Set ESC to English " .. switch)
+  hs.execute("/Applications/gksdud.app/Contents/Helpers/gksdud set escape=" .. switch)
 end
 
 
@@ -57,10 +80,15 @@ gksdudToEnglishWatcher = hs.application.watcher.new(function(appName, eventType,
   local currentSource = hs.keycodes.currentSourceID()
 
   if currentSource ~= englishInputSource
-      and ideBundleIDs[bundleID] == true then
+      and activeToEnglishIDs[bundleID] == true then
     switchToEnglish()
   end
 
+  local currentEscFlag = escToEnglishIDs[bundleID] == true
+  if beforeEscFlag ~= currentEscFlag then
+    setEscToEnglish(currentEscFlag)
+    beforeEscFlag = currentEscFlag
+  end
 end)
 
 gksdudToEnglishWatcher:start()

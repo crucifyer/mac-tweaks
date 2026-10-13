@@ -26,8 +26,6 @@ right_option 을 한자/이모티콘 키로 변경 [hanjakey.json](karabiner/han
 - UTM 리눅스 ibus 라면 우상단 언어상태 클릭 > 키보드 설정 에서 한국어(Hangul) 만 남기고, 설정 에서 Alt_R, Ctrl_R 로 각각 할당하면 됩니다.
 - UTM Mac 에서는 변환 상태를 해제하고, hammerspoon 으로 gksdud 을 pause 하면 F19 가 그대로 전달되므로 이전 입력 소스 선택 을 F19 로 설정하면 됩니다. guest 에서 gksdud 을 설치할 수는 없습니다.
 
-특정 앱에서만 esc 로 영문 전환 [esc.to.english.json](karabiner/esc.to.english.json)
-
 ## 키보드의 Home, End 를 윈도우 처럼
 ```bash
 mkdir ~/Library/KeyBindings
@@ -61,7 +59,7 @@ curl -sSLO https://raw.githubusercontent.com/crucifyer/mac-tweaks/refs/heads/mai
 
 한영키 충돌하는 앱에서 비활성 [gisdud-disable.lua](hammerspoon/gksdud-disable.lua)
 
-특정 앱이 활성화 될 때 영문으로 변경 [gisdud-toenglish.lua](hammerspoon/gksdud-toenglish.lua)
+특정 앱이 활성화 될 때 영문으로 변경, 특정 앱에서만 esc 로 영문 전환 [gisdud-toenglish.lua](hammerspoon/gksdud-toenglish.lua)
 
 ## Scroll Reverser
 ```bash
