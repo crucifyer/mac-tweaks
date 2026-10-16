@@ -26,17 +26,6 @@ right_option 을 한자/이모티콘 키로 변경 [hanjakey.json](karabiner/han
 - UTM 리눅스 ibus 라면 우상단 언어상태 클릭 > 키보드 설정 에서 한국어(Hangul) 만 남기고, 설정 에서 Alt_R, Ctrl_R 로 각각 할당하면 됩니다.
 - UTM Mac 에서는 변환 상태를 해제하고, hammerspoon 으로 gksdud 을 pause 하면 F19 가 그대로 전달되므로 이전 입력 소스 선택 을 F19 로 설정하면 됩니다. guest 에서 gksdud 을 설치할 수는 없습니다.
 
-## 키보드의 Home, End 를 윈도우 처럼
-```bash
-mkdir ~/Library/KeyBindings
-cd ~/Library/KeyBindings
-curl -sSLO https://raw.githubusercontent.com/crucifyer/mac-tweaks/refs/heads/main/DefaultKeyBinding.dict
-```
-- 새로 실행한 앱 부터 적용됩니다. 재부팅 하는 것이 편합니다.
-- home, end 를 누르면 커서가 줄의 맨 앞, 뒤 로 이동합니다.
-- shift+ 로 선택도 잘 됩니다.
-- slack 앱 처럼 줄 구별 없이 전체의 맨 앞, 뒤 로 이동하는 앱은 karabiner 에 등록하세요. [home.end.json](karabiner/home.end.json)
-
 ## HammerSpoon
 hammerspoon 을 설치하세요.
 ```bash
@@ -67,3 +56,25 @@ brew install --cask scroll-reverser
 ```
 - 맥북의 트랙패드의 스크롤은 종이를 미는 감각이므로 미는 방향으로 스크롤 되는 것이 자연스럽습니다.
 - 마우스의 휠은 롤러를 돌리는 감각이므로 롤러 반대편의 종이는 반대쪽으로 밀려나는 것이 자연스럽습니다.
+
+## 맥 설정
+
+### 키보드의 Home, End 를 윈도우 처럼
+```bash
+mkdir ~/Library/KeyBindings
+cd ~/Library/KeyBindings
+curl -sSLO https://raw.githubusercontent.com/crucifyer/mac-tweaks/refs/heads/main/DefaultKeyBinding.dict
+```
+- 새로 실행한 앱 부터 적용됩니다. 재부팅 하는 것이 편합니다.
+- home, end 를 누르면 커서가 줄의 맨 앞, 뒤 로 이동합니다.
+- shift+ 로 선택도 잘 됩니다.
+- slack 앱 처럼 줄 구별 없이 전체의 맨 앞, 뒤 로 이동하는 앱은 karabiner 에 등록하세요. [home.end.json](karabiner/home.end.json)
+
+### Ctrl + Cmd 드래그 창 이동
+```bash
+defaults write -g NSWindowShouldDragOnGesture -bool true # 켜기
+defaults delete -g NSWindowShouldDragOnGesture # 끄기
+```
+- ctrl + cmd + 창 아무곳이나 마우스 드래그 로 창 이동이 됩니다.
+- 재부팅해야 적용됩니다.
+- ide, 원격제어 앱 등 안되는 앱들이 있습니다.
