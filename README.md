@@ -34,8 +34,11 @@ hs
 cd ~/.hammerspoon
 curl -sSLO https://raw.githubusercontent.com/crucifyer/mac-tweaks/refs/heads/main/hammerspoon/init.lua
 curl -sSLO https://raw.githubusercontent.com/crucifyer/mac-tweaks/refs/heads/main/hammerspoon/windowsize.lua
-curl -sSLO https://raw.githubusercontent.com/crucifyer/mac-tweaks/refs/heads/main/hammerspoon/gksdud-disable.lua
-curl -sSLO https://raw.githubusercontent.com/crucifyer/mac-tweaks/refs/heads/main/hammerspoon/gksdud-toenglish.lua
+mkdir gksdud
+cd gksdud
+curl -sSLO https://raw.githubusercontent.com/crucifyer/mac-tweaks/refs/heads/main/hammerspoon/gksdud/lib.lua
+curl -sSLO https://raw.githubusercontent.com/crucifyer/mac-tweaks/refs/heads/main/hammerspoon/gksdud/unsupport-disable.lua
+curl -sSLO https://raw.githubusercontent.com/crucifyer/mac-tweaks/refs/heads/main/hammerspoon/gksdud/app-defaultlanguage.lua
 ```
 [init.lua](hammerspoon/init.lua) 에서 원하는 기능만 dofile 로 불러오세요.
 
@@ -46,9 +49,10 @@ curl -sSLO https://raw.githubusercontent.com/crucifyer/mac-tweaks/refs/heads/mai
 - control + shift + command + 방향키 : 해당 방향의 화면으로 이동하기
 - control + option + command + 방향키 : 해당 방향의 화면으로 이동하고 채우기
 
-한영키 충돌하는 앱에서 비활성 [gisdud-disable.lua](hammerspoon/gksdud-disable.lua)
+한영키 충돌하는 앱에서 비활성 [gksdud/unsupport-disable.lua](hammerspoon/gksdud/unsupport-disable.lua)
+- 유니버설 컨트롤 대응 (테스트가 필요합니다.)
 
-특정 앱이 활성화 될 때 영문으로 변경, 특정 앱에서만 esc 로 영문 전환 [gisdud-toenglish.lua](hammerspoon/gksdud-toenglish.lua)
+특정 앱이 활성화 될 때 원하는 입력소스로 변경, 특정 앱에서만 esc 로 영문 전환 [gisdud/app-defaultlanguage.lua](hammerspoon/gksdud/app-defaultlanguage.lua)
 
 ## Scroll Reverser
 ```bash

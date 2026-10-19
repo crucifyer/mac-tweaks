@@ -1,96 +1,96 @@
 hs.hotkey.bind({"ctrl", "alt"}, "left", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
+	local win = hs.window.focusedWindow()
+	local f = win:frame()
+	local screen = win:screen()
+	local max = screen:frame()
 
-  f.x = max.x
-  f.y = max.y
-  f.w = max.w / 2
-  f.h = max.h
-  win:setFrame(f)
+	f.x = max.x
+	f.y = max.y
+	f.w = max.w / 2
+	f.h = max.h
+	win:setFrame(f)
 end)
 
 hs.hotkey.bind({"ctrl", "alt"}, "right", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
+	local win = hs.window.focusedWindow()
+	local f = win:frame()
+	local screen = win:screen()
+	local max = screen:frame()
 
-  f.x = max.x + (max.w / 2)
-  f.y = max.y
-  f.w = max.w / 2
-  f.h = max.h
-  win:setFrame(f)
+	f.x = max.x + (max.w / 2)
+	f.y = max.y
+	f.w = max.w / 2
+	f.h = max.h
+	win:setFrame(f)
 end)
 
 hs.hotkey.bind({"ctrl", "alt"}, "up", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
+	local win = hs.window.focusedWindow()
+	local f = win:frame()
+	local screen = win:screen()
+	local max = screen:frame()
 
-  f.y = 0
-  f.h = max.h / 2
-  win:setFrame(f)
+	f.y = 0
+	f.h = max.h / 2
+	win:setFrame(f)
 end)
 
 hs.hotkey.bind({"ctrl", "alt"}, "down", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
+	local win = hs.window.focusedWindow()
+	local f = win:frame()
+	local screen = win:screen()
+	local max = screen:frame()
 
-  f.y = max.y + (max.h / 2)
-  f.h = max.h / 2
-  win:setFrame(f)
+	f.y = max.y + (max.h / 2)
+	f.h = max.h / 2
+	win:setFrame(f)
 end)
 
 hs.hotkey.bind({"ctrl", "alt"}, "f", function()
-  local win = hs.window.focusedWindow()
-  win:maximize()
+	local win = hs.window.focusedWindow()
+	win:maximize()
 end)
 
 hs.hotkey.bind({"ctrl", "alt", "cmd"}, "right", function()
-  local win = hs.window.focusedWindow()
-  win:moveOneScreenEast(true)
-  win:maximize()
+	local win = hs.window.focusedWindow()
+	win:moveOneScreenEast(true)
+	win:maximize()
 end)
 
 hs.hotkey.bind({"ctrl", "alt", "cmd"}, "left", function()
-  local win = hs.window.focusedWindow()
-  win:moveOneScreenWest(true)
-  win:maximize()
+	local win = hs.window.focusedWindow()
+	win:moveOneScreenWest(true)
+	win:maximize()
 end)
 
 hs.hotkey.bind({"ctrl", "alt", "cmd"}, "up", function()
-  local win = hs.window.focusedWindow()
-  win:moveOneScreenNorth(true)
-  win:maximize()
+	local win = hs.window.focusedWindow()
+	win:moveOneScreenNorth(true)
+	win:maximize()
 end)
 
 hs.hotkey.bind({"ctrl", "alt", "cmd"}, "down", function()
-  local win = hs.window.focusedWindow()
-  win:moveOneScreenSouth(true)
-  win:maximize()
+	local win = hs.window.focusedWindow()
+	win:moveOneScreenSouth(true)
+	win:maximize()
 end)
 
 hs.hotkey.bind({"ctrl", "shift", "cmd"}, "right", function()
-  local win = hs.window.focusedWindow()
-  win:moveOneScreenEast(true)
+	local win = hs.window.focusedWindow()
+	win:moveOneScreenEast(true)
 end)
 
 hs.hotkey.bind({"ctrl", "shift", "cmd"}, "left", function()
-  local win = hs.window.focusedWindow()
-  win:moveOneScreenWest(true)
+	local win = hs.window.focusedWindow()
+	win:moveOneScreenWest(true)
 end)
 
 hs.hotkey.bind({"ctrl", "shift", "cmd"}, "up", function()
-  local win = hs.window.focusedWindow()
-  win:moveOneScreenNorth(true)
+	local win = hs.window.focusedWindow()
+	win:moveOneScreenNorth(true)
 end)
 
 hs.hotkey.bind({"ctrl", "shift", "cmd"}, "down", function()
-  local win = hs.window.focusedWindow()
-  win:moveOneScreenSouth(true)
+	local win = hs.window.focusedWindow()
+	win:moveOneScreenSouth(true)
 end)
