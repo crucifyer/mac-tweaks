@@ -15,7 +15,7 @@ brew install --cask karabiner-elements
 right_option 을 한자/이모티콘 키로 변경 [hanjakey.json](karabiner/hanjakey.json)
 - 한글 상태에서는 한자, 그 외에는 이모티콘 검색기가 됩니다.
 
-한글(₩) 입력시 백틱(`) 변경 [backtick.json](karabiner/backtick.json)
+한글(₩) 입력시 백틱(`) 변경 [backtick.json](karabiner/backtick.json) - gksdud 2.1.0 에 추가됨.
 
 마우스 이전/다음 버튼을 Finder 에 매핑 [finder.mouse.back.forward.json](karabiner/finder.mouse.back.forward.json)
 
